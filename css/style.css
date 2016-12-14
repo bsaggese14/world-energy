@@ -1,0 +1,486 @@
+html {
+  padding-bottom: 10px;
+
+}
+
+body {
+  padding: 10px;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif; 
+  background-color: #fff;
+}
+svg {
+  padding: 10px;
+  background-color: #fff;
+}
+h2 {
+  color: #005689;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  display: inline;
+  color: #005689;
+  font-weight: bold;
+
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  margin: 5px 5px 5px 5px
+
+}
+.legendLinear text {
+  font-size: 10px;
+}
+
+/******************
+* MAP
+******************/
+
+#canvas-svg {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+  #sliderNum {
+    position: absolute;
+    left: 570px;
+    right: 100px;
+    font-size: 60px;
+    top: 10px;
+
+  }
+
+/******************
+* SLIDER
+******************/
+
+.slider {
+  margin: 10px;
+  margin-left: 0px;
+  z-index: 1;
+}
+.fixedSlider { 
+  position: fixed;
+  top: 50px;
+}
+
+/******************
+* BAR CHART
+******************/
+#dataZoom {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 50px;
+  float: right;
+  margin-right: 1%;
+}
+#textInput {
+  border-left: thick solid #005689;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+#temp {
+  display: inline-block;
+  width: 600px;
+  border: solid black;
+}
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+.yearAxis {
+  margin-bottom: 10px;
+  color: #647F54;
+  z-index: 2;
+}
+.fixedYearAxis {
+  position: fixed;
+  top: 80px;
+}
+rect {
+  transition: width 1s;
+}
+#sliderAxis {
+  width: 750px;
+}
+#tick1 {
+  display: inline-block;
+  left: 0px;
+  margin-left: 85px;
+  margin-right: 275px;
+}
+#tick2 {
+  display: inline-block;
+  margin-right: 275px;
+  left: 275px;
+}
+#tick3 {
+  display: inline-block;
+  left: 600px;
+}
+
+/******************
+* Chord Diagram
+******************/
+
+#chordG {
+  display: inline-block;
+  float:right;
+  padding-right: 35px;
+
+}
+
+path.chord:hover {
+  cursor: default;
+}
+
+text.titles {
+  cursor: pointer;
+  font-size: 12px;
+}
+#chordTitle {
+  color: black;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#chordDate {
+  margin-top: 20px;
+  font-size: 75px;
+}
+#chordChangeDescript {
+  font-size: 18px;
+  border-left: thick solid #005689;
+  padding-left: 15px;
+  margin-top: 40px;
+  height: 120px;
+  width:500px;
+  text-align: left;
+
+}
+
+/******************
+* Buttons
+******************/
+.btn-group {
+  padding-top: 15px;
+}
+
+#buttons {
+  text-align: center;
+  width: 740px;
+  margin: 10px;
+  margin-left: 0px;
+}
+
+#play {
+  display: inline-block;
+  width: 60px;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#play:hover {
+  opacity: 0.8;
+}
+
+/******************
+* Tool Tips
+******************/
+
+#tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+  font-size: 10px;
+  z-index: 1;
+}
+path:hover {
+  cursor: pointer;
+}
+.tooltip_key {
+  font-weight: bold;
+}
+
+.tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+/******************
+* Slider
+******************/
+.container {
+  width: 720px;
+  padding: 20px;
+}
+#slider2 {
+  width: 650px;
+  float:right;
+  padding-top:15px;
+  color: #aaa;
+}
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+/******************
+* Bar Graph
+******************/
+path.domain {
+  fill: none;
+  stroke: black;
+}
+
+.clicked {
+  background-color: #647F54;
+}
+#dataZoom text {
+  font-size: 15px;
+}
+.axis  {
+  border: solid blue;
+}
+
+path {
+  transition: .5s;
+}
+
+p {
+  display: inline;
+}
+.land {
+  fill: #222;
+}
+
+/******************
+* Drop Down
+******************/
+
+#dropdowns {
+  display: inline-block;
+  float: right;
+  width: 50%;
+  font-size:15px;
+}
+
+#country3 {
+  margin-left: 5px;
+  border: 1px solid black;
+}
+
+select {
+  width: 150px;
+  cursor: pointer;
+}
+
+#button {
+  margin-right: 5%;
+  margin-top: 20px;
+  float: right;
+
+}
+button:focus, #country3:focus, #button:focus {
+  outline:0 !important;
+}
+
+/******************
+* Bottom Text
+******************/
+
+#bottomText {
+  margin-top: 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  width: 740px;
+
+}
+
+text.label {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.row {
+  padding: 0px;
+}
+.secTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/******************
+* Bottom Text
+******************/
+
+#population {
+  float:right;
+  padding-right: 140px;
+}
+
+
+#textInput {
+  width: 470px;
+  font-size: 18px;
+  float: right;
+
+}
+
+#rightSideTitle {
+  float:right;
+  font-size: 20px;
+  padding-right:20px;
+  font-weight:bold;
+}
+
+/******************
+* MISC
+******************/
+
+hr {
+  float: right;
+  padding-bottom: 15px;
+}
+.descripChordContainer {
+  padding-top: 35px;
+}
+.emphasize {
+  font-weight: bolder;
+  font-size: 16px;
+  display: inline;
+}
+
+/******************
+* SCROLL
+******************/
+::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #CCC; 
+}
+
+#description {
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  padding-left: 10px;
+}
