@@ -2,7 +2,6 @@ html {
   padding-bottom: 10px;
 
 }
-
 body {
   padding: 10px;
   height: 100%;
@@ -13,6 +12,7 @@ body {
 svg {
   padding: 10px;
   background-color: #fff;
+  display: inline-block;
 }
 h2 {
   color: #005689;
@@ -79,8 +79,6 @@ h4 {
   display: inline-block;
   vertical-align: top;
   padding-bottom: 50px;
-  float: right;
-  margin-right: 1%;
 }
 #textInput {
   border-left: thick solid #005689;
@@ -135,8 +133,6 @@ rect {
 
 #chordG {
   display: inline-block;
-  float:right;
-  padding-right: 35px;
 
 }
 
